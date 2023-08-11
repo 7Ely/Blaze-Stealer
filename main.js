@@ -54,4 +54,4 @@ for (const folder of slashCommandFolders) {
 // -----------------------------------------------------------------------------------------------------------
 
 
-client.login(config.TOKEN);
+client.login("token");
